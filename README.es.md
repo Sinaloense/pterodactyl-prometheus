@@ -9,7 +9,7 @@ Dockerfile y Egg para correr Prometheus dentro de un servidor Pterodactyl.
 
 ## Características
 
-- Prometheus version: `prometheus-3.10.0`.
+- Prometheus version: `3.10.0`.
 
 ## Requisitos:
 
