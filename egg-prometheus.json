@@ -4,13 +4,13 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2026-03-20T13:27:52-07:00",
+    "exported_at": "2026-10-25T23:44:09-07:00",
     "name": "Prometheus",
     "author": "sinaloensemel@gmail.com",
     "description": "prometheus egg",
     "features": [],
     "docker_images": {
-        "bookworm": "ghcr.io\/sinaloense\/pterodactyl-debian:bookworm-slim"
+        "bookworm": "ghcr.io\/sinaloense\/pterodactyl-debian:trixie-slim"
     },
     "file_denylist": [],
     "startup": ".\/prometheus --config.file=prometheus.yml --web.listen-address=\":{{SERVER_PORT}}\"",
@@ -22,8 +22,8 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n# Prometheus Installation Script\r\n#\r\n\r\napt-get update\r\napt-get install --no-install-recommends -y ca-certificates wget\r\n\r\n# Download configs in a tmp folder\r\nmkdir -p \/mnt\/server\/ZtMCQm\/\r\nrm -Rf \/mnt\/server\/ZtMCQm\/*\r\ncd \/mnt\/server\/ZtMCQm\/\r\n\r\n# Download Prometheus\r\nwget https:\/\/github.com\/prometheus\/prometheus\/releases\/download\/v3.10.0\/prometheus-3.10.0.linux-amd64.tar.gz\r\ntar xvf prometheus-3.10.0.linux-amd64.tar.gz\r\nmv prometheus-3.10.0.linux-amd64\/* \/mnt\/server\/\r\n\r\n# Delete tmp folder\r\ncd \/mnt\/server\/\r\nrm -Rf ZtMCQm\/",
-            "container": "debian:bookworm-slim",
+            "script": "#!\/bin\/bash\r\n# Prometheus Installation Script\r\n#\r\n\r\napt-get update\r\napt-get install --no-install-recommends -y ca-certificates wget\r\n\r\n# Download configs in a tmp folder\r\nmkdir -p \/mnt\/server\/ZtMCQm\/\r\nrm -Rf \/mnt\/server\/ZtMCQm\/*\r\ncd \/mnt\/server\/ZtMCQm\/\r\n\r\n# Download Prometheus\r\nwget https:\/\/github.com\/prometheus\/prometheus\/releases\/download\/v3.15.1\/prometheus-3.15.1.linux-amd64.tar.gz\r\ntar xvf prometheus-3.15.1.linux-amd64.tar.gz\r\nmv prometheus-3.15.1.linux-amd64\/* \/mnt\/server\/\r\n\r\n# Delete tmp folder\r\ncd \/mnt\/server\/\r\nrm -Rf ZtMCQm\/",
+            "container": "debian:trixie-slim",
             "entrypoint": "bash"
         }
     },

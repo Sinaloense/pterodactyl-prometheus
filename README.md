@@ -3,13 +3,11 @@ Dockerfile and Egg to run Prometheus inside a Pterodactyl server.
 
 ## Repository contents
 
-- `Dockerfile` — Image with cloudflared and required scripts. (https://github.com/Sinaloense/pterodactyl-debian/blob/main/Dockerfile)
-- `entrypoint.sh` — Startup script. (https://github.com/Sinaloense/pterodactyl-debian/blob/main/entrypoint.sh)
 - `egg-prometheus.json` — Egg to use in Pterodactyl.
 
 ## Features
 
-- Prometheus version: `3.10.0`.
+- Prometheus version: `3.15.1`.
 
 ## Requirements
 
